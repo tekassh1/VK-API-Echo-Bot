@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.example.vkapibot.model.responses.error.VkError;
 
 @Getter
 @Setter
@@ -23,4 +24,6 @@ public class Callback {
 
     @JsonProperty("object")
     private VkObject vkObject;
+
+    private VkError error;
 }

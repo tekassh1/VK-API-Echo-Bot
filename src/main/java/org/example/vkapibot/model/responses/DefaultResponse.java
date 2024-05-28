@@ -1,4 +1,4 @@
-package org.example.vkapibot.model.responses.users_response;
+package org.example.vkapibot.model.responses;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -6,14 +6,11 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.example.vkapibot.model.responses.error.VkError;
 
-import java.util.ArrayList;
-
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class UsersResponse {
+public class DefaultResponse {
 
-    private ArrayList<UserData> response;
     private VkError error;
 }
