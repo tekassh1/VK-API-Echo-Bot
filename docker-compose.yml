@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  vk-bot-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - SPRING_CONFIG_LOCATION=/config/application.properties
+    volumes:
+      - ./src/main/resources/application.properties:/config/application.properties
+    ports:
+      - "8080:8080"
+
+  ngrok:
+    image: ngrok/ngrok:latest
+    command:
+      - "start"
+      - "--all"
+      - "--config"
+      - "/etc/ngrok.yml"
+    volumes:
+      - ./ngrok.yml:/etc/ngrok.yml
+    ports:
+      - "4040:4040"
