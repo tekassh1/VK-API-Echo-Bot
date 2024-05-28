@@ -1,6 +1,6 @@
 version: '2'
 
-authtoken: 2h3VlqCPguEf7kuLt2izMpiq6kN_4vfQeLQMyL2L68YFRxjLx
+authtoken: <your-ngrok-auth-token>
 tunnels:
   vk-bot-api:
     proto: http

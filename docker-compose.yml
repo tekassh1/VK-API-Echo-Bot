@@ -9,8 +9,6 @@ services:
       - SPRING_CONFIG_LOCATION=/config/application.properties
     volumes:
       - ./src/main/resources/application.properties:/config/application.properties
-    ports:
-      - "8080:8080"
 
   ngrok:
     image: ngrok/ngrok:latest
