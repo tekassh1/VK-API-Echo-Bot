@@ -51,6 +51,8 @@ public class UsersService {
         if (response.getError() != null)
             logger.error("Request error: {}", response.getError().getErrorMessage());
 
+
+
         return new UserData(response.getResponse().getFirst().getFirstName(),
                             response.getResponse().getFirst().getLastName());
     }

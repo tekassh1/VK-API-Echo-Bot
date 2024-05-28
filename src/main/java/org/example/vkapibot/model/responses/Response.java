@@ -1,17 +1,20 @@
 package org.example.vkapibot.model.responses;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.example.vkapibot.model.responses.error.VkError;
 
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class DefaultResponse {
+public class Response {
 
-    private VkError error;
-    private Response response;
+    @JsonProperty("cmid")
+    private int cmid;
+
+    @JsonProperty("message_id")
+    private int messageId;
 }

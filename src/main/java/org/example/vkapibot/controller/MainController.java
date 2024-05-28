@@ -109,7 +109,7 @@ public class MainController {
             return ResponseEntity.ok("ok");
         }
         else {
-             logger.warn("Bot doesn't support {} event.", callback.getType());
+            logger.warn("Bot doesn't support {} event.", callback.getType());
             return ResponseEntity.ok("ok");
         }
     }
