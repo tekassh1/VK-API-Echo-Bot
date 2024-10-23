@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  vk-bot-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - SPRING_APPLICATION_NAME=VKApiBot
+      - SERVER_ACCESS_TOKEN=<your-server-access-token>
+      - SERVER_CONFIRMATION_TOKEN=<your-server-confirmation-token>
+      - SERVER_SECRET_KEY=<your-server-secret-key>
+
+      - VK_API_VERSION=5.199
+      - VK_API_METHOD_URL=https://api.vk.com/method/
+      - VK_API_SEND_MESSAGE_METHOD=messages.send
+      - VK_API_GET_USER_METHOD=users.get
+
+  ngrok:
+    image: ngrok/ngrok:latest
+    command:
+      - "start"
+      - "--all"
+      - "--config"
+      - "/etc/ngrok.yml"
+    volumes:
+      - ./ngrok.yml:/etc/ngrok.yml
+    ports:
+      - "4040:4040"

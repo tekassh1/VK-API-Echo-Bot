@@ -1,0 +1,7 @@
+version: '2'
+
+authtoken: <your-ngrok-authtoken>
+tunnels:
+  vk-bot-api:
+    proto: http
+    addr: vk-bot-api:8080
