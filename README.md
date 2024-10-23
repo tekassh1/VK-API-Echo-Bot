@@ -25,7 +25,7 @@
 
 #### Со стороны сервера:
 * Генерируем gradle wrapper файлы: `gradle wrapper` (Gradle-8.10.2, Java 21).
-* Собираем проект `gradle build`.
+* Собираем проект `./gradlew build`.
 * В файле `docker-compose.yml` задаем переменные для использования в приложении:
 * * `SERVER_ACCESS_TOKEN` - токен доступа к VK API.
 * * `SERVER_CONFIRMATION_TOKEN` - ключ единоразового подтверждения сервера.
